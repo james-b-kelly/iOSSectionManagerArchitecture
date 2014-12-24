@@ -8,10 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ *  This is an example of an API handling class.  Typically this would fetch items from an API
+ *  (using some kind of network stack like AFNetworking) and parse the results into objects which
+ *  can be consumed by other classes in the app.
+ */
+
+
 typedef void (^CompletionBlockWithArray)(NSError *error, NSArray *array);
 
 @interface APIClient : NSObject
 
+/**
+ *  Examples of methods to fetch two different types of objects from an API.
+ */
 - (void)fetchPrimaryItemsFromAPIWithCompletion:(CompletionBlockWithArray)completion;
 
 - (void)fetchSecondaryItemsFromAPIWithCompletion:(CompletionBlockWithArray)completion;

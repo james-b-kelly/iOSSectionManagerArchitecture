@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ *  An example object used throughout the app.
+ */
+
 @interface Item : NSObject
 @property (nonatomic, copy) NSString *itemTitle;
 @property (nonatomic, copy) NSString *itemDescription;

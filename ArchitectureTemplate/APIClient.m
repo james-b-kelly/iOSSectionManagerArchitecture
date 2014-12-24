@@ -11,10 +11,12 @@
 
 @implementation APIClient
 
+/**
+ *  These methods just create some Item objects as if they were returned from an API.
+ *  In a real-world scenario these items would be parsed from a JSON/XML response from an API.
+ */
+
 - (void)fetchPrimaryItemsFromAPIWithCompletion:(CompletionBlockWithArray)completion {
-    //This is where you would call your API and parse out the values into NSDictionary objects.
-    
-    //We'll fake some objects here.
     NSMutableArray *objects = [NSMutableArray array];
     for (NSInteger i = 0; i < 4; i++) {
         Item *item = [[Item alloc] init];
@@ -28,9 +30,6 @@
 }
 
 - (void)fetchSecondaryItemsFromAPIWithCompletion:(CompletionBlockWithArray)completion {
-    //This is where you would call your API and parse out the values into NSDictionary objects.
-    
-    //We'll fake some objects here.
     NSMutableArray *objects = [NSMutableArray array];
     for (NSInteger i = 0; i < 3; i++) {
         Item *item = [[Item alloc] init];

@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "ViewModel.h"
 
+/**
+ *  Example of a view model subclassed from ViewModel.
+ */
+
 @interface ListViewModel : ViewModel
 
 @property (nonatomic, readonly) NSInteger numberOfPrimaryItems;
@@ -17,6 +21,10 @@
 @property (nonatomic, readonly) NSInteger numberOfSecondaryItems;
 - (NSString *)titleForSecondaryItemAtIndex:(NSInteger)index;
 
+/**
+ *  As stated in
+ *
+ */
 - (id)primaryItemAtIndex:(NSInteger)index;
 - (id)secondaryItemAtIndex:(NSInteger)index;
 

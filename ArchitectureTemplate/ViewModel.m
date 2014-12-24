@@ -15,6 +15,7 @@
 }
 
 - (void)notifyDelegateViewModelDidUpdate {
+    //Override this in your subclass if you don't want the delegate to be notified by default.
     if ([self.delegate respondsToSelector:@selector(viewModelDidUpdateData:)]) {
         [self.delegate viewModelDidUpdateData:self];
     }

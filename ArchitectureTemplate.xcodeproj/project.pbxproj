@@ -34,6 +34,7 @@
 		8C7CBC4C1A4A893100A4DAFE /* DetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7CBC4A1A4A893100A4DAFE /* DetailCollectionViewCell.m */; };
 		8C7CBC4D1A4A893100A4DAFE /* DetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C7CBC4B1A4A893100A4DAFE /* DetailCollectionViewCell.xib */; };
 		8C7CBC511A4A8C6100A4DAFE /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7CBC501A4A8C6100A4DAFE /* Item.m */; };
+		8C7CBC561A4A8EBB00A4DAFE /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7CBC551A4A8EBB00A4DAFE /* CoreDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,8 @@
 		8C7CBC4B1A4A893100A4DAFE /* DetailCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailCollectionViewCell.xib; sourceTree = "<group>"; };
 		8C7CBC4F1A4A8C6100A4DAFE /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		8C7CBC501A4A8C6100A4DAFE /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		8C7CBC541A4A8EBB00A4DAFE /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		8C7CBC551A4A8EBB00A4DAFE /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -346,6 +349,8 @@
 			children = (
 				8C7CBC4F1A4A8C6100A4DAFE /* Item.h */,
 				8C7CBC501A4A8C6100A4DAFE /* Item.m */,
+				8C7CBC541A4A8EBB00A4DAFE /* CoreDataManager.h */,
+				8C7CBC551A4A8EBB00A4DAFE /* CoreDataManager.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -475,6 +480,7 @@
 			files = (
 				8C7CBC291A4A5BD600A4DAFE /* SecondaryCollectionViewCell.m in Sources */,
 				8C7CBC2E1A4A5C9B00A4DAFE /* ExampleDataProvider.m in Sources */,
+				8C7CBC561A4A8EBB00A4DAFE /* CoreDataManager.m in Sources */,
 				8C7CBC421A4A7B7F00A4DAFE /* DetailExtraInfoSectionManager.m in Sources */,
 				7D1173731A49966B007A6B86 /* AppDelegate.m in Sources */,
 				8C7CBC351A4A7AC200A4DAFE /* DetailViewModel.m in Sources */,
