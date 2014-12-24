@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SectionManagerProtocol.h"
+#import "SectionManager.h"
 
-@interface ListSecondarySectionManager : NSObject <SectionManagerProtocol>
+@interface ListSecondarySectionManager : SectionManager
 
 @end

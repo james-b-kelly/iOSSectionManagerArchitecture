@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SecondaryCollectionViewCellID" id="gTV-IL-0wX" customClass="SecondaryCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FF0-Xh-nZC">
+                        <rect key="frame" x="8" y="14" width="304" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" red="0.8394121202" green="0.8394121202" blue="0.8394121202" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="FF0-Xh-nZC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="8VM-yO-gx6"/>
+                <constraint firstAttribute="bottom" secondItem="FF0-Xh-nZC" secondAttribute="bottom" constant="15" id="ks4-Nd-vuE"/>
+                <constraint firstItem="FF0-Xh-nZC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="14" id="nDs-ZZ-sYd"/>
+                <constraint firstAttribute="trailing" secondItem="FF0-Xh-nZC" secondAttribute="trailing" constant="8" id="txt-oF-R8K"/>
+            </constraints>
+            <size key="customSize" width="289" height="50"/>
+            <connections>
+                <outlet property="label" destination="FF0-Xh-nZC" id="eBZ-em-PHq"/>
+            </connections>
+            <point key="canvasLocation" x="465" y="310"/>
+        </collectionViewCell>
+    </objects>
+</document>

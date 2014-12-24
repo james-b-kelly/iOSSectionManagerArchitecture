@@ -7,30 +7,40 @@
 //
 
 #import "ListSecondarySectionManager.h"
+#import "ListViewModel.h"
+#import "SecondaryCollectionViewCell.h"
+
+@interface ListSecondarySectionManager()
+@property (nonatomic, strong) ListViewModel *viewModel;
+@end
 
 @implementation ListSecondarySectionManager
-@synthesize collectionView = _collectionView, viewModel = _viewModel;
+@synthesize viewModel = _viewModel, collectionView = _collectionView;
 
 - (instancetype)initWithCollectionView:(UICollectionView *)collectionView
-                             viewModel:(id<ViewModelProtocol>)viewModel {
+                             viewModel:(ViewModel *)viewModel {
     if (self = [super init]) {
-        _viewModel = viewModel;
+        _viewModel = (ListViewModel *)viewModel;
         _collectionView = collectionView;
         
+        UINib *cellNib = [UINib nibWithNibName:NSStringFromClass([SecondaryCollectionViewCell class]) bundle:nil];
+        [_collectionView registerNib:cellNib forCellWithReuseIdentifier:SecondaryCollectionViewCellID];
     }
     return self;
 }
 
 - (NSInteger)numberOfItems {
-    return 1;
+    return self.viewModel.numberOfSecondaryItems;
 }
 
 - (CGSize)sizeForItemAtIndex:(NSInteger)index {
-    return CGSizeMake(CGRectGetWidth(self.collectionView.frame), 44.0);
+    return CGSizeMake(CGRectGetWidth(self.collectionView.frame), 88.0);
 }
 
-- (UICollectionViewCell *)cellForIndex:(NSInteger)index {
-    return nil;
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    SecondaryCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:SecondaryCollectionViewCellID forIndexPath:indexPath];
+    cell.label.text = [self.viewModel titleForSecondaryItemAtIndex:indexPath.row];
+    return cell;
 }
 
 @end

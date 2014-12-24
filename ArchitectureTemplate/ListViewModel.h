@@ -7,8 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ViewModelProtocol.h"
+#import "ViewModel.h"
 
-@interface ListViewModel : NSObject <ViewModelProtocol>
+@interface ListViewModel : ViewModel
+
+@property (nonatomic, readonly) NSInteger numberOfPrimaryItems;
+- (NSString *)titleForPrimaryItemAtIndex:(NSInteger)index;
+
+@property (nonatomic, readonly) NSInteger numberOfSecondaryItems;
+- (NSString *)titleForSecondaryItemAtIndex:(NSInteger)index;
+
+- (id)primaryItemAtIndex:(NSInteger)index;
+- (id)secondaryItemAtIndex:(NSInteger)index;
 
 @end

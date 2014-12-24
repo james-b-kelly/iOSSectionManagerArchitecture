@@ -1,5 +1,5 @@
 //
-//  ListMainSectionManger.h
+//  ListPrimarySectionManger.h
 //  ArchitectureTemplate
 //
 //  Created by Jamie on 23/12/14.
@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SectionManagerProtocol.h"
+#import "SectionManager.h"
 
-@interface ListMainSectionManger : NSObject <SectionManagerProtocol>
+@interface ListPrimarySectionManager : SectionManager
 
 @end
