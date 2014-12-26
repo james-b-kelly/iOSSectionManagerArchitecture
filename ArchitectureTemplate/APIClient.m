@@ -14,6 +14,12 @@
 /**
  *  These methods just create some Item objects as if they were returned from an API.
  *  In a real-world scenario these items would be parsed from a JSON/XML response from an API.
+ *
+ *  In this example the 'data provider' classes retrieve data from the 'API client' classes in the form
+ *  of 'Item' objects.  You will most likely be using some form of persistence like Coredata.
+ *  in that case, it is up to you whether you want your API client classes interacting with Coredata,
+ *  or you want to pass you data from API clients to data providers as NSDictionary objects and do the 
+ *  Coredata importing in your data providers.
  */
 
 - (void)fetchPrimaryItemsFromAPIWithCompletion:(CompletionBlockWithArray)completion {
