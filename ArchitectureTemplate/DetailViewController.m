@@ -28,6 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.viewModel loadData];
     [self loadSectionManagers];
 }
 

@@ -10,9 +10,14 @@
 
 @interface DetailViewModel : ViewModel
 
+/**
+ *  Detail view model for displaying a single item.  Note that 
+ *  the Item object itself is not exposed at all, just it's properties.
+ */
+
 - (instancetype)initWithItem:(NSDictionary *)item;
 
-@property (nonatomic, copy, readonly) NSString *itemName;
+@property (nonatomic, copy, readonly) NSString *itemTitle;
 @property (nonatomic, copy, readonly) NSString *itemDescription;
 
 @end

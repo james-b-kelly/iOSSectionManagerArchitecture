@@ -38,7 +38,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     DetailCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:DetailCollectionViewCellID forIndexPath:indexPath];
-    cell.titleLabel.text = self.viewModel.itemName;
+    cell.titleLabel.text = self.viewModel.itemTitle;
     return cell;
 }
 

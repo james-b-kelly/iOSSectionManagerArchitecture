@@ -23,7 +23,14 @@
 
 @class SectionManager;
 @protocol SectionManagerDelegate <NSObject>
-
+/**
+ *  Depending on how you want to handle navigation you call this method on your section manager's delegate.
+ *  That delegate will most likely be the UIViewController which owns it.  
+ *  Most commonly you'll want your view controller to be the one to push/present other view controllers.
+ *  If you wanted, you could pass a reference to the view controller's UINavigationController to your
+ *  section managers and let them do the pushing/presenting, but I find it makes more sense to have the
+ *  view controller as the hub for navigation calls.
+ */
 - (void)sectionManager:(SectionManager *)sectionManager didSelectItemAtIndex:(NSInteger)index;
 
 @end
@@ -42,6 +49,9 @@
 
 @property (nonatomic, strong) ViewModel *viewModel;
 
+/**
+ *  We don't necessarily need to keep a reference to the collection view in our section managers, but sometimes it's useful.
+ */
 @property (nonatomic, strong) UICollectionView *collectionView;
 
 - (NSInteger)numberOfItems;

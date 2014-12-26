@@ -16,6 +16,7 @@
 
 @interface ListViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, ViewModelBaseDelegate, SectionManagerDelegate>
 @property (nonatomic, strong) IBOutlet UICollectionView *collectionView;
+
 @property (nonatomic, strong) ListViewModel *viewModel;
 @property (nonatomic, strong) NSArray *sectionManagers;
 @end
@@ -30,6 +31,11 @@
 }
 
 - (void)loadSectionManagers {
+    /**
+     *  Here we build our array of section managers.
+     *  Note that you can reorder your collection view simply by changing the order of the section
+     *  managers in the array.
+     */
     ListPrimarySectionManager *mainSectionManager = [[ListPrimarySectionManager alloc] initWithCollectionView:self.collectionView
                                                                                             viewModel:(ViewModel *)self.viewModel];
     
@@ -37,8 +43,10 @@
                                                                                                              viewModel:(ViewModel *)self.viewModel];
     mainSectionManager.delegate = self;
     secondarySectionManager.delegate = self;
+    
     self.sectionManagers = @[mainSectionManager,
                              secondarySectionManager];
+    
     [self.collectionView reloadData];
 }
 

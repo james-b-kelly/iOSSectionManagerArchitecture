@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *  Example of a view contoller with a UICollectionView showing a list of objects.
+ *  There are two sections in the collection view, each showing a few items.
+ *  Tapping on one of the items pushes a detail view controller, to show how
+ *  navigation may work with this pattern.
+ */
+
 @interface ListViewController : UIViewController
 
 @end
