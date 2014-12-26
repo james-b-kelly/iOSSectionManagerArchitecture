@@ -16,6 +16,16 @@
  *  managers will not (with the exception of building a new view model for another view controller).
  *  So if you ever change your object model implementation, you will only have to worry about your data providers
  *  and your View Models.
+ *
+ *  Depending on how carefully you write your view models, they should be reusable rather than being tied to one
+ *  view controller.  Consider writing your view models as small as possible.
+ *  So your view controller would have one 'big' view model which has references to multiple small view models.
+ *  Suppose your view controller has a Product detail section and a Shop detail section.  You might want to have one view model
+ *  corrosponding to each of those sections and reference them from your VC through its main view model.  
+ *  
+ *  label.text = self.viewModel.shopViewModel.shopName.
+ *  
+ *  That way, you can reuse the shop view model on another view controller.
  */
 
 
