@@ -41,7 +41,7 @@
 }
 
 - (NSString *)itemDescription {
-    return self.itemDescription;
+    return _itemDescription;
 }
 
 
